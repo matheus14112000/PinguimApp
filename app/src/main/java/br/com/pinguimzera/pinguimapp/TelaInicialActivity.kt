@@ -4,7 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.Toast
+import android.view.View
 import kotlinx.android.synthetic.main.activity_tela_inicial.*
 
 class TelaInicialActivity : DebugActivity() {
@@ -17,7 +17,6 @@ class TelaInicialActivity : DebugActivity() {
         button1.setOnClickListener{ onClickBotao1() }
         button2.setOnClickListener{ onClickBotao2() }
         button3.setOnClickListener{ onClickBotao3() }
-
     }
 
     private fun onClickBotao1(){
@@ -41,18 +40,22 @@ class TelaInicialActivity : DebugActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
         val id = item.itemId
 
         if (id == R.id.action_atualizar) {
-            Toast.makeText(this, "Clicou em atualizar",
-                Toast.LENGTH_SHORT).show()
+            progressBar.visibility = View.VISIBLE
+            progressBar.postDelayed({
+                progressBar.visibility = View.GONE
+            }, 10000)
+
         } else if (id == R.id.action_configurar) {
             val intent = Intent(this, TelaConfiguracaoActivity::class.java)
             startActivity(intent)
+
         } else if (id == android.R.id.home) {
             finish()
         }
         return super.onOptionsItemSelected(item)
-
     }
 }

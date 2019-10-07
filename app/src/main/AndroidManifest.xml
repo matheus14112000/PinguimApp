@@ -9,13 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MapasActivity"></activity>
+        <activity android:name=".SkinsActivity"></activity>
+        <activity android:name=".MapasActivity" />
         <activity android:name=".ArmasActivity" />
-        <activity android:name=".SkinsActivity" />
+        <activity android:name=".TelaBuscaActivity" />
         <activity android:name=".TelaConfiguracaoActivity" />
-        <activity
-            android:name=".TelaInicialActivity"
-            android:theme="@style/AppTheme.Toolbar" />
+        <activity android:name=".TelaInicialActivity" />
         <activity android:name=".DebugActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

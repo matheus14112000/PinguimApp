@@ -6,13 +6,12 @@
         android:icon="@drawable/ic_atualizar_white"
         android:title="@string/action_atualizar"
         app:showAsAction="ifRoom"
-    />
+        />
 
     <item
         android:id="@+id/action_configurar"
         android:icon="@drawable/ic_configuracoes_white"
         android:title="@string/action_configurar"
         app:showAsAction="never"
-    />
+        />
 </menu>
-

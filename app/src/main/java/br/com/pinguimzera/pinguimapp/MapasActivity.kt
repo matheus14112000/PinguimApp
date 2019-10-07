@@ -12,11 +12,6 @@ class MapasActivity : DebugActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.menu_main, menu)
-        return true
-    }
-
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val id = item.itemId
 
